@@ -1,0 +1,1398 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&display=swap');
+:root {
+    --Logo-Font:'Roboto Mono', monospac;
+}
+/* Goloba VAR ============================>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    scroll-behavior: smooth;
+}
+
+.Container {
+    max-width: 2500px;
+    overflow: hidden;
+    margin: 0 auto;
+   
+    
+}
+/* Navabr the SidePages NavIcon_Close===========================>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+nav {
+    width: 20%;
+    background-color: whitesmoke;
+    position : fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    transition: all 0.5s ease;
+    transform: translateX(100%);
+    transform-origin: right;
+
+}
+nav ul {
+    padding-left: 20%;
+    margin-top: 20%;
+}
+nav ul li {
+    margin-bottom: 30px;
+}
+nav ul li a {
+    padding: 5px;
+    display: block;
+     font-family: var(--Logo-Font);
+     font-weight: 600;
+     position: relative;
+}
+nav ul li:hover a {
+    color:red;
+    opacity: 0.5;
+    margin-left: 10px;
+    transition: all 0.5s ease;
+}
+nav ul li a::before {
+ content: "";
+ position: absolute;
+ left: -10px;
+ bottom: -10px;
+ border-bottom: 5px solid red;
+ width: 30%;
+ height: 100%;
+ transform: scaleX(0);
+ transform-origin:left ;
+ transition: transform 0.5s ease;
+}
+nav ul li a::after {
+content: "";
+ position: absolute;
+ left: -10px;
+ bottom: -5px;
+ border-left: 5px solid red;
+ width: 100%;
+ height: 60%;
+ transform: scaleY(0);
+ transform-origin:bottom ;
+ transition: transform 0.5s ease;
+ 
+}
+nav ul li:hover a::after {
+    transform: scaleY(1);
+    transition: transform 0.5s ease;
+}
+nav ul li:hover a::before {
+    transform: scaleX(1);
+    transition: transform 0.5s ease;
+}
+.Close {
+    position: relative;
+    margin-left: 80%;
+    margin-top: 10px;
+    display: block;
+    border-radius: 10px;
+    background-color: white;
+   }
+   
+   .Close span:nth-child(1){
+      top:50%;
+      transform: translateY(-50%) rotateZ(45deg);
+   
+   }
+   .Close span:nth-child(2){
+      bottom: 50%;
+       transform: translateY(+50%) rotateZ(-45deg);
+    
+    }
+
+/* Section Of Header & Logo & NavIcon_Open==============
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    width: 90%;
+    margin:0 auto;
+ }
+header .Logo {
+    font-size: 1.5rem;
+    font-family: var(--Logo-Font);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 800;
+}
+header .Logo span {
+   color: red;
+   font-size: 2rem !important;
+}
+.Btn_Open,.Close {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease;
+   
+}
+.Btn_Open span ,.Close span{
+    position: absolute;
+    width: 80%;
+    height: 5px;
+    left: 10%;
+    background-color: black;
+  transition: all 0.5s ease;  
+}
+.show {
+    transform: scaleX(1);
+    transition: all 0.5s ease;
+    
+}
+.Move_Warpper {
+    margin-left: 10% !important;
+    transition: all 0.5s ease;
+}
+.Btn_Open span:nth-child(1) {
+   top:20%;
+}
+.Btn_Open span:nth-child(2) {
+    top:50%;
+    transform: translateY(-50%);
+ }
+ .Btn_Open span:nth-child(3) {
+    bottom:20%;
+ }
+.Open span:nth-child(1) {
+top:50%;
+transform: translateY(-50%) rotateZ(135deg);
+transition: all 0.5s ease;
+}
+.Open span:nth-child(2) {
+   opacity: 0;
+   transform: translateY(-50%) translateX(-20px);
+   transition: all 0.5s ease;
+}
+.Open span:nth-child(3) {
+ bottom: 50%;
+transform: translateY(+50%) rotateZ(-135deg);
+transition: all 0.5s ease;
+}
+/* For Wrapper i Put everyThing indise this Section ===================>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.Wrapepr {
+    width: 70%;
+    
+    margin-left: 15%;
+    max-width: 2000px;
+    transition: margin-left 0.5s ease;
+    
+}
+.SayHelloToThem {
+    
+    width: 90%;
+    margin:10% auto;
+}
+.Layer {
+    position: relative;
+    display:inline-block;
+    padding: 10px;
+    transform: scaleX(0);
+    transform-origin:left ;
+    overflow: hidden;
+    width: auto;
+}
+
+.OverLayer {
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+transform: scaleX(0);
+background-color: #eeeeee;
+transform-origin: left;
+z-index: 22;
+}
+
+.Self_item_text{
+    opacity: 0;
+    transform: scale(1.2);
+}
+
+.hello {
+    margin-bottom: 10px;
+}
+.Myname span:nth-child(1) {
+    font-size: 2rem;
+    margin-left: 10px;
+
+}
+.Myname span:nth-child(2) {
+    font-size: 2rem;
+    color: red;
+
+}
+.Who {
+    font-size: 1.2rem;
+    font-weight:700;
+    margin-left: 10px !important;
+}
+
+.Skills a {
+position: relative;
+
+
+
+}
+
+.Skills a::after{
+    position: absolute;
+    content: "";
+    width: 80%;
+    height:3px;
+    background-color: violet;
+    bottom: -10px;
+    left: 10%;
+    transform: scaleX(0);
+    transform-origin:left ;
+    transition:transform 0.3s ease ;
+    
+}
+
+.Skills a:hover::after {
+    transform: scaleX(1);
+    
+    transition:transform 0.6s ease ;
+}
+
+
+.MyProjects {
+    width: 70%;
+    margin:0 auto;
+    height: auto;
+    padding: 10px;
+   
+}
+.galery_img {
+    width: 300px;
+    border-radius: 20px;
+}
+.row {
+    display: flex;  
+}
+.col {
+   flex: 23%;
+}
+
+.col .Layer  {
+    flex: 50%;
+    padding:0 !important;
+    border-radius: 20px;
+}
+.Projects {
+   width: 40% !important;
+   display: block;
+   margin:0 auto !important;
+   text-transform: uppercase;
+   margin-bottom: 10px;
+   text-align: center;
+}
+.Projects i {
+    font-size: 2rem !important;
+    animation:SomeYoyo 1s infinite !important;
+}
+
+.Services {
+    width: 90%;
+    margin: 30px auto;
+    
+
+}
+
+.Service_content {
+    text-align:center ;
+    width: 30%;
+    margin: 0 auto;
+    display: block;
+
+}
+.Grid_Service {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
+}
+.Grid_Service .Layer {
+    box-shadow: 0 0 10px whitesmoke ;
+    cursor: pointer;
+}
+
+
+.Grid_Service i {
+    text-align: center;
+   
+    margin: 10px auto;
+    width: 100%;
+    padding: 10px;
+    font-size: 2rem;
+    transition: transform 0.5s ease;
+}
+
+.Grid_Service .text_Header h1 {
+    text-align: center;
+    margin: 20px  auto 30px;
+    transition: color 0.5s ease;
+}
+.Grid_Service .text_Header p {
+    color: gray;
+    opacity: 0.6;
+    letter-spacing: 1.3px;
+    font-size: 1rem;
+    transition: color 0.5s ease;
+    
+}
+
+.Grid_Service .Layer:hover {
+    transform: translateY(-20px) !important;
+    background-color: rgb(49, 49, 49);
+    transition:  all 0.5s ease-in-out;
+    box-shadow: 0 0 10px blue;
+
+}
+.Grid_Service .Layer:hover i {
+    transform: scale(1.2);
+    color:whitesmoke;
+    transition: transform 0.5s ease;
+    
+}
+.Grid_Service .Layer:hover h1 ,.Grid_Service .Layer:hover p {
+    
+    color:whitesmoke ;
+    transition: color 0.5s ease;
+    
+}
+.AboutMe{
+    margin-top: 15%;
+}
+.Personal_Img {
+    margin-top: 10%;
+    display: flex;
+}
+.Personal_Img img {
+    width: 600px;
+    filter: grayscale(0.9) brightness(0.6);
+}
+.Txt_Bio 
+{
+    font-size: 2rem;
+}
+.Content_Bio {
+    font-size: 1.2rem;
+    line-height: 35px;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+.txt_Experience {
+    margin-top: 30px;
+}
+.Experience_Grid {
+    margin-top: 30px;
+    display: grid;
+    grid-gap:20px;
+    grid-template-columns: repeat(2,1fr);
+}
+.Experience_Grid .Experience_items  {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    margin-right:20px;
+}
+.Experience_Icon {
+margin-right:20px;
+margin-top: 5px;
+margin-left: 5px;
+}
+.Experience_Contet h3 {
+    margin-bottom: 20px;
+}
+.Experience_Contet p {
+   
+    text-align: right;
+    color: gray;
+    opacity: 0.6;
+}
+
+
+.Sec_MySkill {
+  
+    z-index: -1;
+    width: 70%;
+    margin:10% auto 10%;
+    height: 60vh;
+}
+.Sec_MySkill .Layer {
+    display: block;
+    width: 30%;
+    
+    margin: 5% 35% 10%;
+    
+}
+.Sec_MySkill .Header_for_Skill {
+    position: relative;
+    margin-bottom: 10% !important;
+    text-align: center;
+    font-size: 2rem;
+    
+}
+
+.Sec_MySkill .Header_for_Skill::after {
+    position: absolute;
+    content: "";
+    bottom: -20px;
+    left: 0%;
+    width: 100%;
+    height: 10px;
+    background-color: gray;
+    opacity: 0.4;
+    border-radius: 10px;
+    transform: scaleX(0);
+    animation: SkillAnimation 3s infinite ease-in-out;
+
+}
+.MySkill {
+
+   
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+.card_Skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    opacity: 0;
+   transform: translateY(100px);
+}
+.card_Skill span {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.Skill_1 {
+position: relative;
+width: 300px;
+height: 300px;
+
+}
+.Skill_1 h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3rem;
+    font-weight: 800;
+
+}
+.Progress_1 circle {
+    stroke: cornflowerblue;
+    stroke-width: 20;
+    stroke-dasharray: 754;
+    stroke-dashoffset:678;
+    stroke-linecap: round;
+    transform: rotateZ(-90deg);
+    transform-origin:center ;
+}
+
+
+/* Sectio of Testimonials======================>>
+>>>>
+>>> */
+
+.Testimonials {
+    width: 80%;
+   margin: 20% auto;
+   height: auto;
+  
+  
+    
+}
+.Testimonials .Layer {
+  
+    display: block;
+    width: 25%;
+    margin: 0 auto;
+}
+.Testimonials  .Self_item_text {
+    text-align: center;
+
+
+}
+
+.Testimonials  .Self_item_text  h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+   
+}
+.Testimonials  .Self_item_text  p {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-left: 60px;
+}
+.item {
+    
+   padding: 10px;
+   margin: 20px;
+   
+}
+.item .Img_test 
+{
+    width: 150px !important;
+    height: 150px !important;
+  
+    margin: 10px auto !important;
+}
+.Img_test img {
+    border-radius: 50%;
+}
+.Text_test {
+    padding: 10px;
+}
+.Text_test h1 ,.Text_test h5{
+text-align: center;
+}
+.Text_test h1 {
+    font-size: 1.3rem;
+    margin: 20px auto 10px;
+}
+.Text_test h5 {
+    color: gray;
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+.Text_test p {
+   
+    font-size: 1.5rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.owl-carousel .owl-stage-outer {
+    margin-top: 10%;
+    
+ 
+  
+}
+.item:hover {
+    
+    background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
+    transform: translateY(-10px) scale(1.02);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    z-index: 11111;
+    border-radius: 10px; 
+ } 
+ .owl-prev,.owl-next {
+     position: absolute;
+     top: 50%;
+    transform: translateY(-50%);
+     font-size: 2rem !important;
+    font-weight: bolder;
+ }
+ .owl-prev {
+    
+     left: -3%;
+     
+ }
+ .owl-next {
+    
+    right: -3%;
+    
+}
+.Bloges {
+    height: ;
+    width: 80%; margin: 10% auto;
+}
+.Bloges .Bloges_Layer {
+    width: 20%;
+    margin: 0 40% 5%;
+    text-align: center;
+}
+.Bloges .Bloges_text h1 {
+  font-size: 3rem;
+}
+.Blog_items_Flex  {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Blog_item {
+    cursor: pointer;
+    padding: 0 10px;
+    margin: 10px 20px;
+}
+.Blog_items_Flex .Blog_item img {
+width: 400px;
+transition: all 0.5s ease-in-out;
+}
+.Blog_items_Flex .Blog_item h2 {
+    margin: 20px 5px 10px;
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+}
+.Blog_items_Flex .Blog_item span {
+    margin: 20px 10px 20px 0;
+    color: gray;
+    opacity: .7;
+}
+
+.Blog_items_Flex .Blog_item p {
+    margin-top: 20px;
+    margin-right: 15px;
+    font-size: 1.2rem;
+    line-height: 40px;
+}
+.Blog_item:hover img {
+    transform: scale(0.9);
+    transition: all 0.5s ease-in-out;
+}
+.Blog_item:hover h2 {
+    letter-spacing: 1px;transition: all 0.5s ease-in-out;
+}
+.Contact_header {
+    display: block;
+    width: 30%;
+    text-align: center;
+    margin: 0 auto 8%;
+}
+.Contact h1 {
+    text-align: center;
+   
+    padding: 10px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.Contact_flex {
+    width: 80%;
+    height: auto;
+
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+}
+.Form {
+    margin-top: 20px;
+    margin-right: 100px;
+}
+
+.Form input {
+    border: none;
+    outline: none;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.6);
+    padding: 10px;font-size: 1.2rem;
+}
+.Form .Firstname {
+    margin-right: 30px;
+    margin-bottom:30px ;
+}
+.Form .Email {
+    margin-bottom: 30px;
+   
+}
+
+.Form textarea {
+    border: none;
+    font-size: 1.2rem;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.6) !important;
+    resize: none;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    
+}
+.Form input:focus {
+    border-bottom-color: red ;
+}
+.Btn_Submite {
+     padding: 20px 30px;
+     font-size: 1.2rem;
+     color: white;
+     background-color:black;
+     border-radius: 10px;
+     margin: 0 auto;
+     cursor: pointer;
+
+}
+
+.Btn_Submite:hover,.Btn_Submite:focus {
+}
+.Mab_image {
+   
+    
+}
+
+footer {
+    width: 100%;
+    max-width: 2500px;
+   
+    margin: 10% auto 0;
+    background-color: black;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.Footer_flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+.Flex_footer p {
+    font-size: 1.2rem !important;
+    color: white;
+    margin-bottom: 20px;
+}
+footer  ul li {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+footer  ul li a {
+    font-size: 1.2rem;
+    color: gray;
+}
+
+footer  ul li a:hover {
+    color: white;
+}
+footer .Contact_Icons p {
+    margin-top: 30px;
+    font-size: 30px !important;
+    letter-spacing: 2px;
+}
+footer .Contact_Icons ul{
+    margin-top: 20px;
+}
+footer .Contact_Icons ul li {
+    display: inline;
+    margin-right:20px ;
+   
+}
+
+footer .Contact_Icons i  {
+    color: #ef476f;
+    font-size: 2rem;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+footer .Contact_Icons li a:hover i {
+    color:#4ea8de ;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+.Copy {
+    justify-self: flex-end;
+    text-align: center;
+}
+.Copy span {
+     color: #457b9d;
+}
+.Copy .fa-copyright {
+    color: white;
+}
+.Copy a {
+   color: white;
+   font-size: 1.1rem !important;
+   margin-left: 10px;
+   transition: all 0.5s ease-in-out;
+}
+.Copy a:hover {
+    letter-spacing: 1px;
+    transition: all 0.5s ease-in-out;
+}
+@keyframes SkillAnimation {
+    0%,100%{
+        opacity: 0.2;
+        transform: scaleX(1);
+    }
+    50%{
+        opacity: 1;
+        transform: scaleX(0.1);
+    }
+}
+@keyframes SomeYoyo {
+    0%,100% {
+        transform: translateY(-10px) ;
+        color: red;
+    }
+    
+    50% {
+        transform: translateY(10px);
+        color: green;
+    }
+    70% {
+        color: blue;
+
+    }
+}
+
+
+@media screen and (max-width:768px){
+    nav {
+        width: 100%;
+        z-index: 22222222;
+    }
+    header{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+   header .Logo {
+       font-size: 1rem;
+       display: inline-block;
+   }
+   .Btn_Open {
+       width: 40px;
+       height: 40px;
+       margin: 10px 0;
+   }
+   .Myname {
+       text-align: center;
+       font-size: 1rem !important;
+   }
+   .Myname span {
+       font-size: 1.5rem !important;
+       text-align: center;
+       margin-top: 10px;
+       margin-left: 0 !important;
+       
+   }
+   .SayHelloToThem .Who .Skills {
+       text-align: center;
+       
+      
+       
+   }
+   .SayHelloToThem .Who .Skills a {
+       display: block;
+       margin-bottom: 10px !important;
+       font-size: 1rem !important;
+      
+       padding: 10px;
+   }
+
+   .SayHelloToThem .Who {
+       
+       padding: 10px;
+       
+       margin:0 auto !important;
+       display: block;
+       width: 200px;
+   }
+   .Projects {
+       width: 100% !important;
+   }
+   .Projects h1 {
+       font-size: 1.2rem;
+   }
+   .MyProjects {
+       
+       width: 100%;
+   }
+   .row {
+       flex-direction: column;
+       
+   }
+   .col {
+       flex: 100%;
+
+       margin: 0 auto;
+       text-align: center;
+   }
+   .galery_img {
+       width: 100% !important;
+       
+   }
+.Service_content {
+    font-size: 1.2rem;
+    width: 100%;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.Grid_Service {
+    grid-template-columns:repeat(1,1fr)
+}
+.Grid_Service .text_Header h1 {
+    font-size: 1.1rem;
+}
+.Grid_Service .text_Header p {
+    font-size: 0.6rem;
+    text-align: center;
+}
+.AboutMe .Layer
+{
+   
+    width: 100% !important;
+    text-align: center;
+}
+.AboutMe .Layer p {
+    font-size: 1rem;
+    text-align: left !important;
+}
+.Personal_Img {
+    flex-direction: column;
+}
+.Personal_Img img {
+       width: 100%;
+       margin-bottom: 20px;
+   }
+.Txt_Bio {
+    text-align: center;
+    font-size: 1rem;
+
+}
+.Content_Bio {
+    font-size: 1rem;
+    line-height: unset;
+    margin-left: 0 !important;
+}
+.Make_margin {
+    margin: 0 !important;
+}
+.Experience_Grid {
+  grid-template-columns: repeat(1,1fr);  
+  margin-top: 50px !important;
+}
+.Experience_Grid .Experience_items {
+    flex-direction: column;
+    margin: 15px auto !important;
+    align-items: center;
+
+}
+.Experience_Grid .Experience_items .Experience_Icon {
+    margin: 10px auto 20px !important;
+    text-align: center !important;
+}
+.AboutMe .Layer p {
+    text-align: center !important;
+}
+.Sec_MySkill {
+    width: 100%;
+    height: auto;
+    padding: 10 0;
+}
+.Sec_MySkill .Layer {
+    width: 100%;
+    margin: 10px auto 30px;
+}
+.Header_for_Skill {
+    width: 100% !important;
+    
+}
+.MySkill {
+    flex-direction: column;
+} 
+.card_Skill {
+  margin-bottom: 30px !important;
+}
+
+.card_Skill span {
+    font-size: 1.2rem;
+}
+.Sec_MySkill .Header_for_Skill {
+    font-size: 1.2rem;
+
+}
+.Testimonials {
+    width: 100%;
+}
+.Testimonials .Layer {
+width: 100% !important;
+
+text-align: center  !important;
+}
+.Testimonials .Self_item_text h1 {
+    font-size: 1.5rem;
+}
+.Testimonials .Self_item_text p {
+    font-size: 1.2rem;
+    margin-left: 0;
+    text-align: center !important;
+}
+
+.Text_test {
+    padding: 0 !important;
+}
+.Text_test h1 {
+    font-size: 1rem !important;
+    margin: 0 !important;
+}
+.Bloges {
+    width: 100%;
+}
+.Bloges .Bloges_Layer {
+    width: 100%;
+    margin: 10px 0px !important;
+}
+.Bloges .Bloges_text h1 {
+    text-align: center;
+    font-size:1.2rem;
+}
+.Blog_items_Flex {
+    flex-direction: column;
+   
+    justify-content: center;
+    align-items: center;
+}
+.Blog_item {
+    padding: 10px !important;
+}
+.Blog_items_Flex .Blog_item img {
+    width: 100%;
+}
+.Blog_items_Flex .Blog_item h2 {
+    font-size: 1.2rem;
+}
+.Blog_items_Flex .Blog_item span {
+    font-size: 0.8rem;
+}
+.Blog_items_Flex .Blog_item p {
+    font-size: 1rem;
+}
+.Blog_item:hover h2 {
+    letter-spacing: unset !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.Contact {
+    width: 100%;
+}
+.Contact_header {
+    width: 100%;
+}
+.Contact form {
+   
+    width: 100% !important;
+   
+}
+.Form {
+    margin-right: 0;
+    width: 100% !important;
+}
+.Form .Layer {
+    width: 100% !important;
+}
+.Form input,.Form textarea {
+    width: 100%;
+}
+.Contact_flex {
+    width: 100% !important;
+    margin: 10px auto !important;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+}
+.Names_Flexs {
+    flex-direction: column !important;
+    
+}
+.Btn_Submite {
+    margin: 10px auto !important;
+    
+    
+}
+
+
+.Mab_image img {
+    width: 100%;
+}
+   .Footer_flex  {
+      flex-direction: column;
+      padding-left: 30px;
+       
+   }
+   .Footer_flex div  {
+       margin-bottom: 30px;
+   }
+}
+
+@media screen and (max-width:1024px){
+    nav {
+        width: 20%;
+        z-index: 22222222;
+    }
+    
+   header .Logo {
+       font-size: 1.5rem;
+       display: inline-block;
+   }
+   .Btn_Open {
+       width: 50px;
+       height: 50px;
+       margin: 10px 0;
+   }
+   .Myname {
+       text-align: center;
+       font-size: 2rem !important;
+   }
+   .Myname span {
+       font-size: 3rem !important;
+       text-align: center;
+       margin-top: 10px;
+       margin-left: 0 !important;
+       
+   }
+   .SayHelloToThem .Who .Skills {
+       text-align: center;
+       
+      
+       
+   }
+   .SayHelloToThem .Who .Skills a {
+       display: block;
+       margin-bottom: 10px !important;
+       font-size: 1rem !important;
+      
+       padding: 10px;
+   }
+
+   .SayHelloToThem .Who {
+       
+       padding: 10px;
+       
+       margin:0 auto !important;
+       display: block;
+       width: 200px;
+   }
+   .Projects {
+       width: 100% !important;
+   }
+   .Projects h1 {
+       font-size: 2rem;
+   }
+   .MyProjects {
+       
+       width: 100%;
+   }
+   .row {
+       flex-direction: column;
+       
+   }
+   .col {
+       flex: 100%;
+
+       margin: 0 auto;
+       text-align: center;
+   }
+   .galery_img {
+       width: 600px !important;
+       
+   }
+.Service_content {
+    font-size: 1.5rem;
+    width: 100%;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.Grid_Service {
+    grid-template-columns:repeat(2,1fr)
+}
+.Grid_Service .text_Header h1 {
+    font-size: 1.5rem;
+}
+.Grid_Service .text_Header p {
+    font-size: 0.9rem;
+    text-align: center;
+}
+.AboutMe .Layer
+{
+    width: 100% !important;
+    text-align: center;
+}
+.AboutMe .Layer p {
+    font-size: 1rem;
+    text-align: left !important;
+}
+.Personal_Img {
+    flex-direction: column;
+}
+.Personal_Img img {
+       width: 100%;
+       margin-bottom: 20px;
+   }
+.Txt_Bio {
+    text-align: center;
+    font-size: 1rem;
+
+}
+.Content_Bio {
+    font-size: 1rem;
+    line-height: unset;
+    margin-left: 0 !important;
+}
+.Make_margin {
+    margin: 0 !important;
+}
+.Experience_Grid {
+  grid-template-columns: repeat(1,1fr);  
+  margin-top: 50px !important;
+}
+.Experience_Grid .Experience_items {
+    flex-direction: column;
+    margin: 15px auto !important;
+    align-items: center;
+
+}
+.Experience_Grid .Experience_items .Experience_Icon {
+    margin: 10px auto 20px !important;
+    text-align: center !important;
+}
+.AboutMe .Layer p {
+    text-align: center !important;
+}
+.Sec_MySkill {
+    width: 100%;
+    height: auto;
+    padding: 10 0;
+}
+.Sec_MySkill .Layer {
+    width: 100%;
+    margin: 10px auto 30px;
+}
+.Header_for_Skill {
+    width: 100% !important;
+    
+}
+.MySkill {
+    flex-direction: column;
+} 
+.card_Skill {
+  margin-bottom: 30px !important;
+}
+
+.card_Skill span {
+    font-size: 1.2rem;
+}
+.Sec_MySkill .Header_for_Skill {
+    font-size: 1.2rem;
+
+}
+.Testimonials {
+    width: 100%;
+}
+.Testimonials .Layer {
+width: 100% !important;
+
+text-align: center  !important;
+}
+.Testimonials .Self_item_text h1 {
+    font-size: 1.5rem;
+}
+.Testimonials .Self_item_text p {
+    font-size: 1.2rem;
+    margin-left: 0;
+    text-align: center !important;
+}
+
+.Text_test {
+    padding: 0 !important;
+}
+.Text_test h1 {
+    font-size: 1rem !important;
+    margin: 0 !important;
+}
+.Bloges {
+    width: 100%;
+}
+.Bloges .Bloges_Layer {
+    width: 100%;
+    margin: 10px 0px !important;
+}
+.Bloges .Bloges_text h1 {
+    text-align: center;
+    font-size:1.2rem;
+}
+.Blog_items_Flex {
+    flex-direction: column;
+   
+    justify-content: center;
+    align-items: center;
+}
+.Blog_item {
+    padding: 10px !important;
+}
+.Blog_items_Flex .Blog_item img {
+    width: 100%;
+}
+.Blog_items_Flex .Blog_item h2 {
+    font-size: 1.2rem;
+}
+.Blog_items_Flex .Blog_item span {
+    font-size: 0.8rem;
+}
+.Blog_items_Flex .Blog_item p {
+    font-size: 1rem;
+}
+.Blog_item:hover h2 {
+    letter-spacing: unset !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.Contact {
+    width: 100%;
+}
+.Contact_header {
+    width: 100%;
+}
+.Contact form {
+   
+    width: 100% !important;
+   
+}
+.Form {
+    margin-right: 0;
+    width: 100% !important;
+}
+.Form .Layer {
+    width: 100% !important;
+}
+.Form input,.Form textarea {
+    width: 100%;
+}
+.Contact_flex {
+    width: 100% !important;
+    margin: 10px auto !important;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+}
+.Names_Flexs {
+    flex-direction: column !important;
+    
+}
+.Btn_Submite {
+    margin: 10px auto !important;
+    
+    
+}
+
+
+.Mab_image img {
+    width: 100%;
+}
+   .Footer_flex  {
+      flex-direction: column;
+      padding-left: 30px;
+       
+   }
+   .Footer_flex div  {
+       margin-bottom: 30px;
+   }
+}
